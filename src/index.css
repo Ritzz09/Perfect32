@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+.custom-shape-divider-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg); /* Flips the wave */
+}
+
+.custom-shape-divider-bottom svg {
+    position: relative;
+    display: block;
+    width: calc(113% + 1.3px); /* Adjust width if needed */
+    height: 132px;
+}
+
+.custom-shape-divider-bottom .shape-fill {
+    fill: #FFFFFF; /* Adjust color if needed */
+}
