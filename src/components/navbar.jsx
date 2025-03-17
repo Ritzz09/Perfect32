@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
-import logo from "../assets/logo";
+import logo from "/public/logo";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);

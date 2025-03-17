@@ -7,7 +7,7 @@ import Accordion from "./components/Faq";
 import ContactForm from "./components/contact";
 import Services from "./components/services";
 import About from "./components/about";
-import logo from "./assets/logo";
+import logo from "/public/logo";
 
 function App() {
   const [loading, setLoading] = useState(true);
