@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
+import logo from "../assets/logo";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +13,7 @@ const Navbar = () => {
 
       {/* Logo */}
       <div className="flex items-center gap-2">
-        <img src="/src/assets/logo.jpg" alt="Logo" className="h-12 w-16" />
+        <img src={logo} alt="Logo" className="h-12 w-16" />
         
       </div>
 

@@ -7,6 +7,7 @@ import Accordion from "./components/Faq";
 import ContactForm from "./components/contact";
 import Services from "./components/services";
 import About from "./components/about";
+import logo from "./assets/logo";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -44,9 +45,9 @@ function App() {
         
         {/* Static Logo inside a separate div */}
         <div className="w-16 h-16 flex items-center justify-center bg-white rounded-full z-50">
-          <img src="src/assets/logo.jpg" alt="Logo" className="w-38 h-16" />
-        </div>
-      </div>
+          <img src={logo} alt="Logo" className="w-38 h-16" />
+        </div>                
+      </div>      
     </div>
     
      
