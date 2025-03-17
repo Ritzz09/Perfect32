@@ -28,7 +28,7 @@ const Navbar = () => {
       </ul>
 
       {/* Contact Us Button (Desktop) */}
-      <button className="hidden md:block bg-gradient-to-r from-sky-600 to-indigo-800 text-white border-black border-2 font-semibold px-5 py-2 rounded-full hover:scale-110 hover:border-b-6 shadow-md">
+      <button className="hidden md:block bg-gradient-to-r from-sky-600 to-indigo-800 text-white border-black border-2 font-semibold px-5 py-2 rounded-full hover:scale-110 hover:border-b-6  shadow-md">
         Book Appointment
       </button>
 

@@ -20,3 +20,28 @@
 .custom-shape-divider-bottom .shape-fill {
     fill: #FFFFFF; /* Adjust color if needed */
 }
+@keyframes waveMove {
+    0% { transform: translateX(0) translateY(0); }
+    50% { transform: translateX(-5vw) translateY(5px); } /* Moves slightly up */
+    100% { transform: translateX(0) translateY(0); }
+}
+
+  
+  .custom-shape-divider-bottom svg {
+    animation: waveMove 8s ease-in-out infinite;
+  }
+
+  @media (max-width: 768px) {  /* For tablets & smaller */
+    .custom-shape-divider-bottom svg {
+        height: 80px; /* Reduce height */
+        width: 120%;  /* Slightly extend width */
+    }
+}
+
+@media (max-width: 480px) {  /* For mobile screens */
+    .custom-shape-divider-bottom svg {
+        height: 60px; /* Even smaller height */
+        width: 150%;  /* Increase width to avoid gaps */
+    }
+}
+  

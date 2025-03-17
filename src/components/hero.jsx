@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <section className="relative w-full h-screen flex items-center justify-center text-center text-white">
       {/* Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-r from-sky-600 to-indigo-800"></div>
+      <div className="absolute inset-0 bg-slate-900"></div>
 
       {/* Background Image Overlay */}
       <div
@@ -20,7 +20,7 @@ const Hero = () => {
         transition={{ duration: 0.5 }}
         className="relative z-10 max-w-2xl px-6"
       >
- <h1 className="bg-gradient-to-r from-sky-600/60 to-indigo-800/60 border-white border-2 text-3xl md:text-5xl shadow-2xl rounded-full p-4 font-bold leading-tight m-2">
+ <h1 className="bg-gradient-to-r from-sky-600/60 to-violet-800/60 border-white border-2 text-3xl md:text-5xl shadow-2xl rounded-full p-4 font-bold leading-tight m-2">
           <TypeAnimation
             sequence={[
               "The Dental Care With The Gentle Touch", 2000
@@ -37,7 +37,7 @@ const Hero = () => {
 
         {/* Buttons */}
         <div className="mt-6 flex justify-center gap-4">
-          <button className="mt-3 bg-transparent text-white border-2 px-6 py-3 rounded-full font-semibold  hover:bg-white/50 hover:text-black hover:border-b-6">
+          <button className="mt-3 bg-transparent text-white border-2 px-6 py-3 rounded-full font-semibold  hover:bg-white/80 hover:text-black hover:border-b-6">
             Book Appointment
           </button>
         </div>
