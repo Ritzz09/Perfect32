@@ -59,8 +59,9 @@ function App() {
           <Navbar />
           <Hero />
           <USP />
-          {/* 
           <About />
+          {/* 
+          
           <Services />
           <ContactForm />
           <Accordion /> */}

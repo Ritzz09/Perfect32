@@ -53,7 +53,7 @@ const Navbar = () => {
           <a href="#" className="hover:text-blue-500 text-lg" onClick={closeMenu}>Testimonials</a>
           <a href="#" className="hover:text-blue-500 text-lg" onClick={closeMenu}>Faqs</a>
           <button
-            className="bg-transparent  text-blue-600 font-semibold px-5 py-2 rounded-full border-2 border-blue-600 hover:scale-110 shadow-md"
+            className="bg-transparent  text-blue-600 font-semibold px-5 py-2 rounded-full border-2 border-blue-600 hover:scale-110 shadow-md "
             onClick={closeMenu}
           >
             Book Appointment
