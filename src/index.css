@@ -14,15 +14,15 @@
     position: relative;
     display: block;
     width: calc(113% + 1.3px); /* Adjust width if needed */
-    height: 132px;
+    height: 130px;
 }
 
 .custom-shape-divider-bottom .shape-fill {
-    fill: #FFFFFF; /* Adjust color if needed */
+    fill: #c2d8f0; /* Adjust color if needed */
 }
 @keyframes waveMove {
     0% { transform: translateX(0) translateY(0); }
-    50% { transform: translateX(-5vw) translateY(5px); } /* Moves slightly up */
+    50% { transform: translateX(-5vw) translateY(0px); } /* Moves slightly up */
     100% { transform: translateX(0) translateY(0); }
 }
 

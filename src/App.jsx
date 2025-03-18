@@ -2,12 +2,12 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import Navbar from "./components/navbar";
 import Hero from "./components/hero";
-import HoverDevCards from "./components/usp";
 import Accordion from "./components/Faq";
 import ContactForm from "./components/contact";
 import Services from "./components/services";
 import About from "./components/about";
 import logo from "/public/logo.jpg";
+import USP from "./components/usp"
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -58,7 +58,8 @@ function App() {
         <>
           <Navbar />
           <Hero />
-          {/* <HoverDevCards />
+          <USP />
+          {/* 
           <About />
           <Services />
           <ContactForm />

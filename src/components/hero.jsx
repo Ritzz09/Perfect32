@@ -1,72 +1,73 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
+import { Smile, Users, ShieldCheck, Heart } from "lucide-react";
+import heroimg from "/public/img/hero.jpeg";
+
+const uspData = [
+  { icon: <Smile size={40} className="text-yellow-500" />, count: "500+", text: "Happy Patients" },
+  { icon: <Users size={40} className="text-yellow-500" />, count: "50+", text: "Expert Dentists" },
+  { icon: <ShieldCheck size={40} className="text-yellow-500" />, count: "100%", text: "Safety Assured" },
+  { icon: <Heart size={40} className="text-yellow-500" />, count: "5-Star", text: "Patient Care" },
+];
+
 const Hero = () => {
   return (
-    <section className="relative w-full h-screen flex items-center justify-center text-center text-white">
+    <section className="relative w-full md:h-screen h-[700px] flex items-center">
       {/* Background Gradient */}
       <div className="absolute inset-0 bg-slate-900"></div>
 
-      {/* Background Image Overlay */}
+      {/* Background Image (Right 60%) */}
       <div
-        className="absolute inset-0 bg-cover bg-center opacity-20"
-        style={{ backgroundImage: "url('https://img.freepik.com/free-vector/dentistry-office-with-dentist-doctor-patient_107791-20894.jpg?t=st=1742201470~exp=1742205070~hmac=98a24b2c3919bebdac9542cdd0f266dea234534a019d1b526ac5dd81352b0c56&w=1380')" }}
+        className="absolute top-0 right-0 h-full w-full md:w-[55%] bg-cover bg-right md:opacity-60 opacity-50"
+        style={{ backgroundImage: `url(${heroimg})` }}
       ></div>
 
-      {/* Content */}
+      {/* Content (Aligned to Left) */}
       <motion.div
-        initial={{ scale: 0 }}
-        animate={{ scale: 1 }}
-        transition={{ duration: 0.5 }}
-        className="relative z-10 max-w-2xl px-6"
+        initial={{ x: -100, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        className="relative z-10 max-w-2xl px-8 md:px-16 md:text-left text-center text-white"
       >
- <h1 className="bg-gradient-to-r from-sky-600/60 to-violet-800/60 border-white border-2 text-3xl md:text-5xl shadow-2xl rounded-full p-4 font-bold leading-tight m-2">
+        <h1 className="text-yellow-500 text-3xl md:text-5xl font-bold leading-tight w-fit">
           <TypeAnimation
-            sequence={[
-              "The Dental Care With The Gentle Touch", 2000
-              // "Smile With Confidence", 2000,
-              // "Your Perfect Smile Awaits", 2000
-            ]}
+            sequence={["The Dental Care With The Gentle Touch", 2000]}
             speed={50}
             repeat={Infinity}
-          /></h1>
+          />
+        </h1>
 
-        <p className="text-lg font-bold text-white">
+        <p className="text-lg font-bold text-white mt-3">
           The Perfect Stairway To Dental Heaven
         </p>
 
         {/* Buttons */}
-        <div className="mt-6 flex justify-center gap-4">
-          <button className="mt-3 bg-transparent text-white border-2 px-6 py-3 rounded-full font-semibold  hover:bg-white/80 hover:text-black hover:border-b-6">
+        <div className="mt-6">
+          <button className="mt-10 bg-transparent text-white border-2 px-6 py-3 rounded-full font-semibold hover:bg-yellow-500 hover:text-black hover:border-b-6">
             Book Appointment
           </button>
         </div>
       </motion.div>
 
-      {/* Wave Shape Divider */}
-      <div className="custom-shape-divider-bottom">
-        <svg
-          data-name="Layer 1"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1200 120"
-          preserveAspectRatio="none"
-        >
-          <path
-            d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
-            opacity=".25"
-            className="shape-fill"
-          ></path>
-          <path
-            d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
-            opacity=".5"
-            className="shape-fill"
-          ></path>
-          <path
-            d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
-            className="shape-fill"
-          ></path>
-        </svg>
-      </div>
+      {/* USP Cards */}
+      <motion.div
+        initial={{ y: 50, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="md:absolute hidden bottom-10 right-6 md:right-20 z-20 md:flex grid-cols-2  gap-4"
+      >
+        {uspData.map((usp, index) => (
+          <div
+            key={index}
+            className="bg-white/10  backdrop-blur-lg rounded-xl p-4 md:p-6 flex flex-col items-center shadow-md shadow-amber-50 hover:scale-110 "
+          >
+            {usp.icon}
+            <p className="text-black text-2xl font-bold mt-2">{usp.count}</p>
+            <p className="text-black text-sm font-semibold">{usp.text}</p>
+          </div>
+        ))}
+      </motion.div>
     </section>
   );
 };

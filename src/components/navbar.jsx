@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import logo from "/public/logo.jpg";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,7 +10,11 @@ const Navbar = () => {
   const closeMenu = () => setIsOpen(false);
 
   return (
-    <nav className="absolute top-3 ml-[20px] md:ml-0 md:left-1/2 md:transform md:-translate-x-1/2 w-[90%] shadow-2xl bg-white border-t-0 border-b-3 rounded-full text-black py-4 px-10 md:px-20 flex items-center justify-between z-50">
+    <motion.nav
+    initial={{ y: -100, opacity: 0 }}  // Start position (hidden above screen)
+    animate={{ y: 0, opacity: 1 }}   // End position (normal)
+    transition={{ duration: 0.5, ease: "easeOut" }} // Smooth animation
+    className="absolute top-3 ml-[20px] md:ml-0 md:left-1/2 md:transform md:-translate-x-1/2 w-[90%] shadow-2xl bg-white border-t-0 border-b-6 border-yellow-500 rounded-full text-black py-4 px-10 md:px-20 flex items-center justify-between z-50">
 
       {/* Logo */}
       <div className="flex items-center gap-2">
@@ -28,7 +33,7 @@ const Navbar = () => {
       </ul>
 
       {/* Contact Us Button (Desktop) */}
-      <button className="hidden md:block bg-gradient-to-r from-sky-600 to-indigo-800 text-white border-black border-2 font-semibold px-5 py-2 rounded-full hover:scale-110 hover:border-b-6  shadow-md">
+      <button className="hidden md:block bg-gradient-to-r from-yellow-300 to-amber-500 text-black border-black border-2 font-semibold px-5 py-2 rounded-full hover:scale-110 hover:border-b-6  shadow-md">
         Book Appointment
       </button>
 
@@ -55,7 +60,7 @@ const Navbar = () => {
           </button>
         </div>
       )}
-    </nav>
+    </motion.nav>
   );
 };
 
