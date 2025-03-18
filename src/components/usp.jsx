@@ -9,7 +9,7 @@ const USP = () => {
   return (
     <motion.div
       ref={ref}
-      className="relative md:hidden grid grid-cols-2 gap-4"
+      className="relative md:hidden grid grid-cols-2 gap-4 p-2"
     >
       {uspData.map((usp, index) => (
         <motion.div
@@ -17,7 +17,7 @@ const USP = () => {
           initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}  // Left slides in from -50px, Right slides in from +50px
           animate={isInView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.8, delay: index * 0.2, ease: "easeOut" }}  // Staggered animation
-          className="bg-white/10 backdrop-blur-lg rounded-xl p-4 md:p-6 flex flex-col items-center shadow-md shadow-amber-50 hover:scale-110 transition-transform duration-300"
+          className="bg-slate-900/10 backdrop-blur-lg rounded-xl p-4 md:p-6 flex flex-col items-center shadow-md shadow-amber-50 hover:scale-110 transition-transform duration-300"
         >
           {usp.icon}
           <p className="text-black text-2xl font-bold mt-2">{usp.count}</p>
