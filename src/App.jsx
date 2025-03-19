@@ -60,9 +60,11 @@ function App() {
           <Hero />
           <USP />
           <About />
+          <Services />
+          <Accordion /> 
           {/* 
           
-          <Services />
+          
           <ContactForm />
           <Accordion /> */}
         </>
