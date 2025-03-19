@@ -94,7 +94,7 @@ const Services = () => {
       <div className="relative z-10 w-full">
         {/* Heading */}
         <motion.h2
-          className="text-4xl font-bold text-white mb-12 text-center"
+          className="md:text-4xl text-2xl font-bold text-white mb-8 text-center"
           initial={{ opacity: 0, y: -50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay:1, ease: "easeOut" }}
@@ -123,7 +123,7 @@ const Services = () => {
             {services.map((service, index) => (
               <SwiperSlide key={index}>
                 <motion.div
-                  className=" rounded-lg overflow-hidden border-yellow-500  bg-white border-4 h-88 m-2 hover:scale-105"
+                  className=" rounded-lg overflow-hidden border-yellow-500  bg-white border-4 md:h-86 h-88 m-2 hover:scale-105"
                   initial={{ opacity: 0, scale: 0.9 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -132,12 +132,12 @@ const Services = () => {
                   <img
                     src={service.image}
                     alt={service.title}
-                    className="w-full h-50 object-cover border-b-2 border-yellow-500"
+                    className="w-full h-44 object-cover border-b-2 border-yellow-500"
                   />
                   
-                  <div className="p-4 text-center">
+                  <div className="p-3 text-center">
                     <h3 className="text-lg font-bold text-gray-800">{service.title}</h3>
-                    <p className="text-sm text-gray-600 mt-2">{service.description}</p>
+                    <p className="text-sm text-gray-600 mt-1">{service.description}</p>
                   </div>
                 </motion.div>
               </SwiperSlide>

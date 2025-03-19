@@ -58,10 +58,10 @@ const About = () => {
   ];
 
   return (
-    <section className="bg-gray-300 py-6 md:px-10 px-3 flex flex-col items-center text-center">
+    <section id="about" className="bg-gray-300 py-6 md:px-10 px-3 flex flex-col items-center text-center">
       {/* Heading Animation - Appears from Top */}
       <motion.h2
-        className="text-4xl font-bold text-gray-800 mb-10"
+        className="md:text-4xl text-2xl font-bold text-gray-800 mb-10"
         initial={{ opacity: 0, y: -50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 1, ease: "easeOut" }}

@@ -13,7 +13,7 @@ const uspData = [
 
 const Hero = () => {
   return (
-    <section className="relative w-full h-screen flex items-center">
+    <section id="home" className="relative w-full h-screen flex items-center">
       {/* Background Gradient */}
       <div className="absolute inset-0 bg-slate-900"></div>
 
