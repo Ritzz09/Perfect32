@@ -14,7 +14,7 @@ const Navbar = () => {
     initial={{ y: -100, opacity: 0 }}  // Start position (hidden above screen)
     animate={{ y: 0, opacity: 1 }}   // End position (normal)
     transition={{ duration: 0.5, ease: "easeOut" }} // Smooth animation
-    className="absolute top-3 ml-[20px] md:ml-0 md:left-1/2 md:transform md:-translate-x-1/2 w-[90%] shadow-2xl bg-gray-300 border-t-0 border-b-6 border-yellow-500 rounded-full text-black py-4 px-10 md:px-20 flex items-center justify-between z-50">
+    className="absolute top-3 ml-[20px] md:ml-0 md:left-1/2 md:transform md:-translate-x-1/2 w-[90%] shadow-2xl bg-white border-t-0 border-b-6 border-yellow-500 rounded-full text-black py-4 px-10 md:px-20 flex items-center justify-between z-50">
 
       {/* Logo */}
       <div className="flex items-center gap-2">
