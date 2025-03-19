@@ -126,7 +126,7 @@ const Services = () => {
                   className=" rounded-lg overflow-hidden border-yellow-500  bg-white border-4 md:h-86 h-88 m-2 hover:scale-105"
                   initial={{ opacity: 0, scale: 0.9 }}
                   whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  transition={{ duration: 0.3, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
                   <img

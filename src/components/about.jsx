@@ -58,7 +58,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="bg-gray-300 py-6 md:px-10 px-3 flex flex-col items-center text-center">
+    <section id="about" className="bg-gray-300 py-6 md:px-10 px-3 flex flex-col items-center text-center min-h-max">
       {/* Heading Animation - Appears from Top */}
       <motion.h2
         className="md:text-4xl text-2xl font-bold text-gray-800 mb-10"

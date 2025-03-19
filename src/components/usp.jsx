@@ -1,22 +1,22 @@
 import { Smile, Users, ShieldCheck, Heart } from "lucide-react";
-import React, { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 const USP = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { triggerOnce: true, threshold: 0.2 });
+  const [startAnimation, setStartAnimation] = useState(false);
+
+  useEffect(() => {
+    setStartAnimation(true); // Triggers only once when the page loads
+  }, []);
 
   return (
-    <motion.div
-      ref={ref}
-      className="relative md:hidden grid grid-cols-2 gap-4 p-2"
-    >
+    <motion.div className="relative md:hidden grid grid-cols-2 gap-4 p-2">
       {uspData.map((usp, index) => (
         <motion.div
           key={index}
-          initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}  // Left slides in from -50px, Right slides in from +50px
-          animate={isInView ? { opacity: 1, x: 0 } : {}}
-          transition={{ duration: 0.8, delay: index * 0.2, ease: "easeOut" }}  // Staggered animation
+          initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+          animate={startAnimation ? { opacity: 1, x: 0 } : {}}
+          transition={{ duration: 0.8, delay: index * 0.2, ease: "easeOut" }}
           className="bg-slate-900/10 backdrop-blur-lg rounded-xl p-4 md:p-6 flex flex-col items-center shadow-md shadow-amber-50 hover:scale-110 transition-transform duration-300"
         >
           {usp.icon}

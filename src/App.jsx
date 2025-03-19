@@ -8,6 +8,7 @@ import Services from "./components/services";
 import About from "./components/about";
 import logo from "/public/logo.jpg";
 import USP from "./components/usp"
+import DentistSection from "./components/dentist";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -61,7 +62,9 @@ function App() {
           <USP />
           <About />
           <Services />
+          <DentistSection />
           <Accordion /> 
+          
           {/* 
           
           
