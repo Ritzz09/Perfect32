@@ -38,7 +38,7 @@ const Hero = () => {
           />
         </h1>
 
-        <p className="text-lg font-bold text-white mt-3">
+        <p className="hidden md:block text-lg font-bold text-white mt-3">
           The Perfect Stairway To Dental Heaven
         </p>
 

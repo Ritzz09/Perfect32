@@ -6,12 +6,14 @@ import "swiper/css/pagination";
 import { Navigation, Autoplay } from "swiper/modules";
 import { Cpu, Smile, Briefcase, ChevronDown } from "lucide-react";
 import { motion } from "framer-motion";
-import img0 from "/public/img/clinic/0.jpeg";
-import img1 from "/public/img/clinic/1.jpeg";
-import img2 from "/public/img/clinic/2.jpeg";
+import img0 from "/public/img/clinic/0.jpg";
+// import img1 from "/public/img/clinic/1.jpg";
+import img2 from "/public/img/clinic/2.jpg";
+import img3 from "/public/img/clinic/3.jpg";
+import img4 from "/public/img/clinic/4.jpg";
 
 const About = () => {
-  const images = [img0, img1, img2];
+  const images = [img0, img2, img3, img4];
 
   // Accordion State
   const [openIndexes, setOpenIndexes] = useState([]); // Track multiple open indexes
@@ -74,7 +76,7 @@ const About = () => {
       <div className="flex flex-col md:flex-row items-center justify-center w-full">
         {/* Image Slider Animation - Appears from Left */}
         <motion.div
-          className="w-full md:w-1/2 rounded-full overflow-hidden shadow-xl shadow-slate-950/50 border-2 border-yellow-500 p-3 bg-slate-700 hover:scale-105 relative"
+          className="w-3/4 md:w-1/3 md:mr-20 rounded-full overflow-hidden shadow-xl shadow-slate-950/50 border-2 border-yellow-500 p-3 bg-slate-700 hover:scale-105 relative"
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
@@ -89,7 +91,7 @@ const About = () => {
             }}
             autoplay={{ delay: 3000 }}
             loop
-            className="rounded-full border-5 border-yellow-500"
+            className="rounded-full md:h-150 h-75 border-5 border-yellow-500"
             onSwiper={(swiper) => {
               swiperRef.current = swiper;
               setTimeout(() => swiper.navigation.update(), 500); // Ensure buttons update
@@ -97,7 +99,7 @@ const About = () => {
           >
             {images.map((img, index) => (
               <SwiperSlide key={index}>
-                <img src={img} alt={`Clinic ${index + 1}`} className="w-full h-96 object-cover" />
+                <img src={img} alt={`Clinic ${index + 1}`} className="w-full  object-cover" />
               </SwiperSlide>
             ))}
           </Swiper>

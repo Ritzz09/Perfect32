@@ -64,8 +64,10 @@ function App() {
           <About />
           <Services />
           <DentistSection />
-          <Accordion /> 
           <Gallery />
+          <Accordion /> 
+          
+          
           
           {/* 
           

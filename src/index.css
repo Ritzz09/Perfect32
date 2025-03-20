@@ -46,3 +46,20 @@
 }
   
 
+.swiper-pagination {
+    background: red !important;
+    height: 30px;
+  }
+        .swiper-pagination-bullet {
+          background-color: white !important;
+          opacity: 0.5;
+          width: 10px;
+          height: 10px;
+          transition: opacity 0.3s ease-in-out;
+        }
+        .swiper-pagination-bullet-active {
+          background-color: #facc15 !important; /* Yellow */
+          opacity: 1;
+          width: 12px;
+          height: 12px;
+        }
