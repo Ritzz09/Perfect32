@@ -84,8 +84,8 @@ const About = () => {
             ref={swiperRef}
             modules={[Navigation, Autoplay]}
             navigation={{
-              prevEl: ".custom-prev",
-              nextEl: ".custom-next",
+              prevEl: ".custom-prev1",
+              nextEl: ".custom-next1",
             }}
             autoplay={{ delay: 3000 }}
             loop
@@ -103,10 +103,10 @@ const About = () => {
           </Swiper>
 
           {/* Navigation Buttons (Ensuring they are outside Swiper) */}
-          <button className="custom-prev absolute top-1/2 left-6 transform -translate-y-1/2 bg-yellow-500 text-slate-800 p-3 rounded-full shadow-lg z-50 hover:scale-110 cursor-pointer">
+          <button className="custom-prev1 absolute top-1/2 left-6 transform -translate-y-1/2 bg-yellow-500 text-slate-800 p-3 rounded-full shadow-lg z-50 hover:scale-110 cursor-pointer">
             &#10094;
           </button>
-          <button className="custom-next absolute top-1/2 right-6 transform -translate-y-1/2 bg-yellow-500 text-slate-800 p-3 rounded-full shadow-lg z-50 hover:scale-110 cursor-pointer">
+          <button className="custom-next1 absolute top-1/2 right-6 transform -translate-y-1/2 bg-yellow-500 text-slate-800 p-3 rounded-full shadow-lg z-50 hover:scale-110 cursor-pointer">
             &#10095;
           </button>
         </motion.div>
@@ -142,7 +142,7 @@ const About = () => {
                 className="w-full bg-yellow-500/70 p-5 rounded-2xl my-3 backdrop-blur-lg transition-all duration-300 hover:bg-yellow-600/80 hover:scale-105 cursor-pointer"
                 initial={{ opacity: 0, x: 100 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.5 }} // Stagger effect
+                transition={{ duration: 0.8, delay: index * 0.2 }} // Stagger effect
                 viewport={{ once: true }}
                 style={{ boxShadow: "rgba(23, 29, 103, 1) 5px 5px" }}
               >

@@ -9,6 +9,7 @@ import About from "./components/about";
 import logo from "/public/logo.jpg";
 import USP from "./components/usp"
 import DentistSection from "./components/dentist";
+import Gallery from "./components/gallery";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -64,6 +65,7 @@ function App() {
           <Services />
           <DentistSection />
           <Accordion /> 
+          <Gallery />
           
           {/* 
           
