@@ -1,122 +1,156 @@
-import React from "react";
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { Phone, Clock, DollarSign, MapPin, Calendar } from "lucide-react";
+import back from "/public/img/contact_bg.png";
 
-const ContactForm = () => {
+export default function FlipCard() {
+  const [flipped, setFlipped] = useState(false);
+
   return (
-    <div>
-      {/* Top container with tagline and backgroundImage */}
-      <div className="relative">
-        {/* Image section */}
-        <section
-          className="w-full h-[20vh] lg:h-[40vh] bg-cover bg-center brightness-50"
-          style={{ background: "black" }}
-        ></section>
+    <div id="contact" className="flex items-center flex-col justify-center bg-slate-900"
+      style={{
+        backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%233E4405' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23EAB308'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E")`,
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
+      }}
+    >
+      <motion.h2
+        className="md:text-lg text-sm font-bold text-yellow-600 hidden md:block mt-15"
+        initial={{ opacity: 0, y: -50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 1, ease: "easeOut" }}
+        viewport={{ once: true }}
+      >
+        <span className="text-white">Ready to Get </span> Started?
+      </motion.h2>
+      <motion.h2
+        className="md:text-4xl text-2xl font-bold text-white mb-5 z-12 md:mt-2 mt-15 px-5 text-center"
+        initial={{ opacity: 0, y: -50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 1, ease: "easeOut" }}
+        viewport={{ once: true }}
+      >
+        <span className="text-yellow-600"> Complete </span>Our Inquiry Form Now
 
-        {/* Tagline division */}
-        <div className="absolute top-1/2 left-[5%] md:left-[10%] -translate-y-1/2 text-white">
-          <h1 className="text-3xl md:text-5xl font-bold">Get In Touch</h1>
-          <p className="text-sm md:text-lg">
-            The Ultimate Guide To Ace SDE Interviews.
-          </p>
-        </div>
-      </div>
+      </motion.h2>
+      <div className="relative w-full max-w-6xl h-[700px] md:p-10 p-2 perspective-1000 justify-center">
+        {/* Flip Container */}
+        <motion.div
+          className="relative w-full h-full transition-transform duration-700"
+          style={{
+            transformStyle: "preserve-3d",
+            transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)",
+          }}
+        >
+          {/* Front Side */}
+          <div
+            className="absolute w-full h-full bg-gray-200/90 shadow-xl rounded-2xl md:p-8 p-2 flex flex-col"
+            style={{ backfaceVisibility: "hidden" }}
+          >
+            <div className="flex flex-col md:grid md:grid-cols-2 md:gap-5 gap-1 md:flex-grow">
 
-      {/* Bottom relative container */}
-      <div className="w-full h-[500px] md:h-[60vh] lg:h-[100vh] bg-blue-100 relative">
-        {/* Floating form container */}
-        <div className="absolute -top-[3%] md:-top-[10%] left-1/2 -translate-x-1/2 grid grid-cols-1 md:grid-cols-3 h-fit w-4/5 md:w-[90%] lg:w-4/5 rounded shadow overflow-hidden text-white">
-          {/* Form section */}
-          <div className="p-2 md:p-4 h-full bg-gray-800 col-span-2">
-            <form>
-              {/* Form heading */}
-              <div className="flex flex-col md:flex-row justify-around items-start md:items-center pt-8 p-4">
-                <h2 className="text-2xl md:text-3xl font-semibold">Send Us A Message</h2>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="icon icon-tabler icon-tabler-mail-forward"
-                  width="33"
-                  height="33"
-                  viewBox="0 0 24 24"
-                  strokeWidth="1.5"
-                  stroke="#fff"
-                  fill="none"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <path d="M12 18h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v7.5" />
-                  <path d="M3 6l9 6l9 -6" />
-                  <path d="M15 18h6" />
-                  <path d="M18 15l3 3l-3 3" />
-                </svg>
+              {/* Left Side */}
+              <div className="md:border-r-2 border-dashed border-yellow-600 md:pr-14 md:pl-10 md:py-10 text-center md:text-left">
+
+                <h2 className="flex items-center justify-center md:justify-start text-xl md:text-2xl font-bold gap-2 md:gap-4 mt-3 md:mt-0 mb-3 text-yellow-600">
+                  <Phone className="w-6 h-6 text-yellow-500" /> Emergency Case
+                </h2>
+
+                <p className="text-lg font-semibold text-black mb-2 ">
+                  Emergency dental care may be needed if you have had a blow to the face, lost a filling, or cracked a tooth.
+                </p>
+                <p className="text-lg ">📞 +91-8850568626</p>
+                <p className="text-lg ">📞 +91-7710001456</p>
+                <p className="text-lg ">📧 info@perfect32dentist.com</p>
+                <p className="text-lg ">📧 perfect32dent@gmail.com</p>
+
+                <h2 className="text-xl md:text-2xl font-bold flex items-center justify-center md:justify-start gap-2 mt-4 mb-3 text-yellow-600 ">
+                  <Clock className="w-6 h-6 text-yellow-500" /> Working Time
+                </h2>
+                <p className="flex text-lg text-gray-900 md:ml-2 justify-center md:justify-start">
+                  <Calendar className="w-6 h-6 mr-2 text-blue-500" />
+                  <span className="font-semibold">Mon-Sat : </span> 10 AM - 11 PM
+                </p>
+                <p className="flex text-lg text-red-600 md:ml-2 justify-center md:justify-start">
+                  <Calendar className="w-6 h-6 mr-2 text-blue-500" />
+                  <span className="font-semibold">Sunday : </span> By Appointment
+                </p>
               </div>
 
-              {/* Form fields */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 py-6 px-4 md:py-12 md:px-8 text-sm">
-                {[
-                  { label: "Name", name: "name", type: "text" },
-                  { label: "Email", name: "email", type: "email" },
-                  { label: "Phone", name: "phone", type: "tel" },
-                  { label: "Subject", name: "subject", type: "text" },
-                  { label: "Message", name: "message", type: "text", colSpan: true },
-                ].map(({ label, name, type, colSpan }) => (
-                  <div key={name} className={`flex flex-col gap-1 ${colSpan ? "md:col-span-2" : ""}`}>
-                    <label className="font-semibold">
-                      {label} <span className="text-red-500">&#42;</span>
-                    </label>
-                    <input
-                      className="border-[1px] border-white bg-gray-800 p-2 rounded-md"
-                      placeholder={`Enter Your ${label}`}
-                      required
-                      name={name}
-                      type={type}
-                    />
-                  </div>
-                ))}
-              </div>
-            </form>
+              {/* Right Side */}
+              <div className="md:p-10 mt-3 md:mt-0 ">
+                <h2 className="text-xl md:text-2xl  font-bold flex items-center gap-2 text-yellow-600 justify-center md:justify-start">
+                  <DollarSign className="w-6 h-6 text-yellow-500" /> Pricing
+                </h2>
+                <p className="text-lg md:text-left text-center">💰 <span className="font-semibold">Consultation - </span>Rs 400/-</p>
+                <p className="text-lg md:text-left text-center">💰 <span className="font-semibold">Dental X-Ray - </span>Rs 300/-</p>
+                <p className="text-lg md:text-left text-center">💰 <span className="font-semibold">Teeth Cleaning - </span>Rs 1200/- onwards</p>
+                <p className="text-lg md:text-left text-center">💰 <span className="font-semibold">Simple Removal of a Tooth - </span>Rs 800/- onwards</p>
 
-            {/* Submit button */}
-            <div className="flex items-center justify-center md:justify-end py-4 px-8">
-              <button className="py-2 px-4 md:py-4 md:px-6 bg-gray-800 rounded-md border-2 border-white flex items-center gap-2 hover:scale-95 transition-all">
-                <span className="text-xl">Submit</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="icon icon-tabler icon-tabler-brand-telegram"
-                  width="30"
-                  height="30"
-                  viewBox="0 0 24 24"
-                  strokeWidth="1.5"
-                  stroke="#fff"
-                  fill="none"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4" />
-                </svg>
+                <h2 className="text-xl md:text-2xl  font-bold md:flex items-center gap-2 mt-4 text-yellow-600 hidden ">
+                  <MapPin className="w-6 h-6 text-yellow-500" /> Our Location
+                </h2>
+                <div className="mt-2 hidden md:block">
+                  <iframe
+                    className="w-full h-52 rounded-lg border-4 border-blue-900"
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d30171.95363241192!2d73.066225!3d19.041997!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c217eaaaaaab%3A0xbe6a5da08409ee3!2sPerfect%2032%20Dentist%20Kharghar!5e0!3m2!1sen!2sin!4v1742559477921!5m2!1sen!2sin"
+                    allowFullScreen
+                    loading="lazy"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+
+            {/* Book Appointment Button at the Bottom */}
+            <div className="flex justify-center mt-6">
+              <button
+                onClick={() => setFlipped(true)}
+                className="md:w-1/4 w-2/3 bg-gradient-to-r from-yellow-300 to-amber-500 text-black border-black border-2 font-semibold px-5 py-2 rounded-full hover:scale-110 hover:border-b-6  shadow-md"
+              >
+                Book Appointment Now
               </button>
             </div>
           </div>
 
-          {/* Contact Information */}
-          <div className="py-6 px-4 h-[500px] md:h-full bg-gradient-to-l from-sky-300 to-blue-500 grid grid-cols-1 grid-rows-5 sm:hidden lg:block">
-            <h2 className="text-xl lg:text-2xl text-center md:text-start font-semibold">Contact Information</h2>
-            <div className="row-span-4 flex flex-col items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-mail-share" width="35" height="35" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#fff" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path d="M13 19h-8a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v6" />
-                <path d="M3 7l9 6l9 -6" />
-                <path d="M16 22l5 -5" />
-                <path d="M21 21.5v-4.5h-4.5" />
-              </svg>
-              <span>yourmail@support.com</span>
+          {/* Back Side */}
+          <div
+            className="absolute w-full h-full bg-gray-200/90 shadow-xl rounded-2xl md:p-26 p-6 flex flex-col items-center justify-center"
+            style={{
+              backfaceVisibility: "hidden",
+              transform: "rotateY(180deg)",
+              position: "absolute",
+              top: 0,
+              left: 0,
+            }}
+          >
+            <div
+              className="absolute justify-center md:h-[700px] md:w-[700px] h-full w-full bg-cover opacity-20 z-0"
+              style={{ backgroundImage: `url(${back})` }}
+            ></div>
+            
+            <h2 className="text-2xl font-bold text-center mb-8 text-slate-900 z-10">Book an Appointment</h2>
+            <div className=" md:grid md:grid-cols-2 gap-4 z-10">
+              <input type="text" placeholder="Name" required className="bg-black/10 md:w-[420px] w-full border p-2 mb-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400 required" />
+              <input type="email" placeholder="Email" className="bg-black/10 w-full border p-2 mb-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400" />
+              <input type="tel" placeholder="Mobile Number" required className="bg-black/10 w-full border p-2 mb-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400" />
+              <input type="text" placeholder="Interest" className="bg-black/10 w-full border p-2 mb-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400" />
             </div>
-            <h1 className="text-center">Follow me on GitHub <a href="https://github.com/Darkstar69">Darkstar69</a></h1>
+            <textarea placeholder="Message" className="bg-black/10 w-full border p-2 mb-2 md:mt-4 h-30 rounded focus:outline-none focus:ring-2 focus:ring-blue-400 z-10"></textarea>
+
+            <button type="submit" className="z-10 bg-gradient-to-r from-yellow-300 to-amber-500 text-black border-black border-2 font-semibold px-5 py-2 rounded-full hover:scale-110 hover:border-b-6 shadow-md transition">
+              Book Appointment
+            </button>
+
+            <button
+              onClick={() => setFlipped(false)}
+              className="z-10 mt-2 w-full text-slate-900 py-1 rounded-lg hover:underline"
+            >
+              Back to Details
+            </button>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
-};
-
-export default ContactForm;
+}

@@ -23,13 +23,15 @@ const Navbar = () => {
       </div>
 
       {/* Desktop Navigation */}
-      <ul className="hidden md:flex gap-8 text-m font-medium">
+      <ul className="hidden md:flex gap-4 text-m font-medium">
   {[
     { name: "Home", id: "home" },
-    { name: "About Us", id: "about" },
+    { name: "About Clinic", id: "about" },
     { name: "Services", id: "services" },
-    { name: "Portfolio", id: "portfolio" },
+    { name: "Dentist", id: "dentist" },
+    { name: "Gallery", id: "gallery" },
     { name: "Testimonials", id: "testimonials" },
+    { name: "Contact Us", id: "contact" },
     { name: "Faqs", id: "faqs" }
   ].map((item) => (
     <li
@@ -43,9 +45,12 @@ const Navbar = () => {
 </ul>
 
       {/* Contact Us Button (Desktop) */}
-      <button className="hidden md:block bg-gradient-to-r from-yellow-300 to-amber-500 text-black border-black border-2 font-semibold px-5 py-2 rounded-full hover:scale-110 hover:border-b-6  shadow-md">
-        Book Appointment
-      </button>
+      <button
+  className="hidden md:block bg-gradient-to-r from-yellow-300 to-amber-500 text-black border-black border-2 font-semibold px-5 py-2 rounded-full hover:scale-110 hover:border-b-6 shadow-md"
+  onClick={() => document.getElementById("contact").scrollIntoView({ behavior: "smooth" })}
+>
+  Book Appointment
+</button>
 
       {/* Hamburger Button (Mobile) */}
       <button className="md:hidden text-black text-2xl" onClick={() => setIsOpen(!isOpen)}>

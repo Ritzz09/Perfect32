@@ -44,9 +44,15 @@ const Hero = () => {
 
         {/* Buttons */}
         <div className="mt-6">
-          <button className="mt-10 bg-transparent text-white border-2 px-6 py-3 rounded-full font-semibold hover:bg-yellow-500 hover:text-black hover:border-b-6">
-            Book Appointment
-          </button>
+        <motion.button
+  className="mt-10 bg-transparent text-white border-2 px-6 py-3 rounded-full font-semibold hover:bg-yellow-500 hover:text-black hover:border-b-6"
+  initial={{ y: 50, opacity: 0 }}
+  whileInView={{ y: 0, opacity: 1 }}
+  transition={{ type: "spring", stiffness: 300, damping: 10 }}
+  viewport={{ once: true }}
+>
+  Book Appointment
+</motion.button>
         </div>
       </motion.div>
 

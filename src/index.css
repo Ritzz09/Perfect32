@@ -63,3 +63,28 @@
           width: 12px;
           height: 12px;
         }
+        .slick-dots li {
+          width: 18px;
+          height: 18px;
+        }
+        
+        .slick-dots li button:before {
+          font-size: 12px !important;  /* Increase dot size */
+          width: 18px !important;
+          height: 18px !important;
+          line-height: 18px !important;
+          opacity: 0.7 !important; /* Make unselected dots more visible */
+          color: #facc15 !important; /* yellow-500 */
+          border-radius: 50%;
+          border-color: #1e293b !important;  
+          border:2px !important;
+        }
+        
+        .slick-dots li.slick-active button:before {
+          font-size: 16px !important;  /* Make active dot bigger */
+          color: #1e293b !important; /* slate-900 */
+          opacity: 1 !important;
+          border-color: #facc15 !important;
+          border:2px !important;
+        }
+        

@@ -10,6 +10,7 @@ import logo from "/public/logo.jpg";
 import USP from "./components/usp"
 import DentistSection from "./components/dentist";
 import Gallery from "./components/gallery";
+import TestimonialSection from "./components/testimonials";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -65,15 +66,9 @@ function App() {
           <Services />
           <DentistSection />
           <Gallery />
-          <Accordion /> 
-          
-          
-          
-          {/* 
-          
-          
+          <TestimonialSection />
           <ContactForm />
-          <Accordion /> */}
+          <Accordion /> 
         </>
       )}
     </div>

@@ -4,10 +4,10 @@ import { Star } from "lucide-react"; // Importing star icon
 
 export default function DentistSection() {
     return (
-        <section className="bg-gray-300 py-10 px-4 md:px-10 flex flex-col items-center text-center">
+        <section id="dentist" className="bg-gray-300 py-10 px-4 md:px-10 flex flex-col items-center text-center">
             {/* Heading Animation - Appears from Top */}
             <motion.h2
-                className="md:text-lg text-sm font-bold text-yellow-600"
+                className="md:text-lg text-sm font-bold text-yellow-600 hidden md:block"
                 initial={{ opacity: 0, y: -50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 1, ease: "easeOut" }}
