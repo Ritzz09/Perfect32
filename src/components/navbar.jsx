@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
-import logo from "/public/logo.jpg";
+import logo from "/public/img/logo.jpg";
 import { motion } from "framer-motion";
 
 const Navbar = () => {
@@ -18,7 +18,7 @@ const Navbar = () => {
 
       {/* Logo */}
       <div className="flex items-center gap-2">
-        <img src={logo} alt="Logo" className="h-12 w-16" />
+        <img src={logo} alt="Logo" className="h-16 w-16" />
         
       </div>
 
@@ -31,8 +31,8 @@ const Navbar = () => {
     { name: "Dentist", id: "dentist" },
     { name: "Gallery", id: "gallery" },
     { name: "Testimonials", id: "testimonials" },
-    { name: "Contact Us", id: "contact" },
-    { name: "Faqs", id: "faqs" }
+    { name: "Contact Us", id: "contact" }
+
   ].map((item) => (
     <li
       key={item.id}

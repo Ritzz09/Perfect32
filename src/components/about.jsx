@@ -76,7 +76,7 @@ const About = () => {
       <div className="flex flex-col md:flex-row items-center justify-center w-full">
         {/* Image Slider Animation - Appears from Left */}
         <motion.div
-          className="w-3/4 md:w-1/3 md:mr-20 rounded-full overflow-hidden shadow-xl shadow-slate-950/50 border-2 border-yellow-500 p-3 bg-slate-700 hover:scale-105 relative"
+          className="w-3/4 md:w-1/3 md:mr-20 rounded-xl overflow-hidden shadow-xl shadow-slate-950/50 border-2 border-yellow-500 p-3 bg-slate-700 hover:scale-105 relative"
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
@@ -91,7 +91,7 @@ const About = () => {
             }}
             autoplay={{ delay: 3000 }}
             loop
-            className="rounded-full md:h-150 h-75 border-5 border-yellow-500"
+            className="rounded-xl md:h-150 h-75 border-5 border-yellow-500"
             onSwiper={(swiper) => {
               swiperRef.current = swiper;
               setTimeout(() => swiper.navigation.update(), 500); // Ensure buttons update
@@ -105,10 +105,10 @@ const About = () => {
           </Swiper>
 
           {/* Navigation Buttons (Ensuring they are outside Swiper) */}
-          <button className="custom-prev1 absolute top-1/2 left-6 transform -translate-y-1/2 bg-yellow-500 text-slate-800 p-3 rounded-full shadow-lg z-50 hover:scale-110 cursor-pointer">
+          <button className="custom-prev1 absolute top-1/2 left-6 transform -translate-y-1/2 bg-yellow-500 text-slate-800 p-3 rounded-xl shadow-lg z-50 hover:scale-110 cursor-pointer">
             &#10094;
           </button>
-          <button className="custom-next1 absolute top-1/2 right-6 transform -translate-y-1/2 bg-yellow-500 text-slate-800 p-3 rounded-full shadow-lg z-50 hover:scale-110 cursor-pointer">
+          <button className="custom-next1 absolute top-1/2 right-6 transform -translate-y-1/2 bg-yellow-500 text-slate-800 p-3 rounded-xl shadow-lg z-50 hover:scale-110 cursor-pointer">
             &#10095;
           </button>
         </motion.div>

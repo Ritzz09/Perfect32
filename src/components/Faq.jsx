@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import triangle from "/public/img/footer_tri.png";
+
 
 const Accordion = () => {
   return (
-    <section className="relative z-8 overflow-hidden bg-gray-300 pb-12 md:px-20 px-10 pt-20 dark:bg-dark lg:pb-[90px] lg:pt-[120px]">
+    <section className="relative z-8 overflow-hidden bg-gray-300 pb-12 md:px-20 px-10 pt-20 dark:bg-dark lg:pb-[90px] lg:pt-[60px]">
       <div className="container mx-auto">
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4">
@@ -59,6 +61,9 @@ const Accordion = () => {
           </div>
         </div>
       </div>
+      <svg className="absolute bottom-[-1px] md:h-20 h-10 left-0 w-full" viewBox="0 0 100 10" preserveAspectRatio="none">
+        <polygon points="0,10 50,0 100,10" fill="rgb(15, 23, 42)" />
+      </svg>
     </section>
   );
 };
@@ -98,6 +103,7 @@ const AccordionItem = ({ header, text }) => {
           {text}
         </p>
       </div>
+      
     </div>
   );
 };

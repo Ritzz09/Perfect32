@@ -66,7 +66,7 @@ export default function Gallery() {
           }}
           navigation={{ nextEl: ".next-btn", prevEl: ".prev-btn" }}
           modules={[EffectCoverflow, Navigation, Autoplay]}
-          className="md:w-[88%] md:h-[450px] "
+          className="md:w-[88%] md:h-[550px] "
           breakpoints={{
             0: {
               slidesPerView: 1, // Show 1 slide for mobile screens
@@ -77,12 +77,12 @@ export default function Gallery() {
           }}
         >
           {images.map((src, index) => (
-            <SwiperSlide key={index} className="flex justify-center h-auto px-10  ">
+            <SwiperSlide key={index} className="flex justify-center h-auto px-10">
               <div className="bg-yellow-400/70 p-2 rounded-lg shadow-lg h-auto md:w-[400px] ">
                 <img
                   src={src}
                   alt={`Slide ${index + 1}`}
-                  className="rounded-lg shadow-md md:w-[400px] object-cover h-[400px] w-[400px]"
+                  className="rounded-lg shadow-md md:w-[400px] object-cover h-[400px] w-[400px] hover:scale-117"
                 />
                 <p className="text-center mt-2 text-gray-700 italic text-sm">
                   Through The Lens

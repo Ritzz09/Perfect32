@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Phone, Clock, DollarSign, MapPin, Calendar } from "lucide-react";
+import { Phone, Clock, DollarSign, MapPin, Calendar , Mail } from "lucide-react";
 import back from "/public/img/contact_bg.png";
 
 export default function FlipCard() {
@@ -31,7 +31,7 @@ export default function FlipCard() {
         transition={{ duration: 0.8, delay: 1, ease: "easeOut" }}
         viewport={{ once: true }}
       >
-        <span className="text-yellow-600"> Complete </span>Our Inquiry Form Now
+        <span className="text-yellow-500"> Complete </span>Our Inquiry Form Now
 
       </motion.h2>
       <div className="relative w-full max-w-6xl h-[700px] md:p-10 p-2 perspective-1000 justify-center">
@@ -53,42 +53,42 @@ export default function FlipCard() {
               {/* Left Side */}
               <div className="md:border-r-2 border-dashed border-yellow-600 md:pr-14 md:pl-10 md:py-10 text-center md:text-left">
 
-                <h2 className="flex items-center justify-center md:justify-start text-xl md:text-2xl font-bold gap-2 md:gap-4 mt-3 md:mt-0 mb-3 text-yellow-600">
+                <h2 className="flex items-center justify-center md:justify-start text-xl md:text-2xl font-bold gap-2 md:gap-4 mt-3 md:mt-0 mb-3 text-yellow-500">
                   <Phone className="w-6 h-6 text-yellow-500" /> Emergency Case
                 </h2>
 
                 <p className="text-lg font-semibold text-black mb-2 ">
                   Emergency dental care may be needed if you have had a blow to the face, lost a filling, or cracked a tooth.
                 </p>
-                <p className="text-lg ">📞 +91-8850568626</p>
-                <p className="text-lg ">📞 +91-7710001456</p>
-                <p className="text-lg ">📧 info@perfect32dentist.com</p>
-                <p className="text-lg ">📧 perfect32dent@gmail.com</p>
+                <p className="text-lg flex  justify-center md:justify-start "><Phone className="w-8 h-8 p-1 text-gray-700" /> +91-8850568626</p>
+                <p className="text-lg flex  justify-center md:justify-start"><Phone className="w-8 h-8 p-1  text-gray-700" />+91-7710001456</p>
+                <p className="text-lg flex  justify-center md:justify-start"><Mail className="w-8 h-8 p-1  text-gray-700" />info@perfect32dentist.com</p>
+               
 
-                <h2 className="text-xl md:text-2xl font-bold flex items-center justify-center md:justify-start gap-2 mt-4 mb-3 text-yellow-600 ">
+                <h2 className="text-xl md:text-2xl font-bold flex items-center justify-center md:justify-start gap-2 mt-4 mb-3 text-yellow-500 ">
                   <Clock className="w-6 h-6 text-yellow-500" /> Working Time
                 </h2>
                 <p className="flex text-lg text-gray-900 md:ml-2 justify-center md:justify-start">
-                  <Calendar className="w-6 h-6 mr-2 text-blue-500" />
+                  <Calendar className="w-6 h-6 mr-2  text-gray-700" />
                   <span className="font-semibold">Mon-Sat : </span> 10 AM - 11 PM
                 </p>
-                <p className="flex text-lg text-red-600 md:ml-2 justify-center md:justify-start">
-                  <Calendar className="w-6 h-6 mr-2 text-blue-500" />
+                <p className="flex text-lg  md:ml-2 justify-center md:justify-start">
+                  <Calendar className="w-6 h-6 mr-2  text-gray-700" />
                   <span className="font-semibold">Sunday : </span> By Appointment
                 </p>
               </div>
 
               {/* Right Side */}
               <div className="md:p-10 mt-3 md:mt-0 ">
-                <h2 className="text-xl md:text-2xl  font-bold flex items-center gap-2 text-yellow-600 justify-center md:justify-start">
+                <h2 className="text-xl md:text-2xl  font-bold flex items-center gap-2 text-yellow-500 justify-center md:justify-start">
                   <DollarSign className="w-6 h-6 text-yellow-500" /> Pricing
                 </h2>
-                <p className="text-lg md:text-left text-center">💰 <span className="font-semibold">Consultation - </span>Rs 400/-</p>
-                <p className="text-lg md:text-left text-center">💰 <span className="font-semibold">Dental X-Ray - </span>Rs 300/-</p>
-                <p className="text-lg md:text-left text-center">💰 <span className="font-semibold">Teeth Cleaning - </span>Rs 1200/- onwards</p>
-                <p className="text-lg md:text-left text-center">💰 <span className="font-semibold">Simple Removal of a Tooth - </span>Rs 800/- onwards</p>
+                <p className="text-lg md:text-left text-center">➤ <span className="font-semibold">Consultation - </span>Rs 400/-</p>
+                <p className="text-lg md:text-left text-center">➤ <span className="font-semibold">Dental X-Ray - </span>Rs 300/-</p>
+                <p className="text-lg md:text-left text-center">➤ <span className="font-semibold">Teeth Cleaning - </span>Rs 1200/- onwards</p>
+                <p className="text-lg md:text-left text-center">➤ <span className="font-semibold">Simple Removal of a Tooth - </span>Rs 800/- onwards</p>
 
-                <h2 className="text-xl md:text-2xl  font-bold md:flex items-center gap-2 mt-4 text-yellow-600 hidden ">
+                <h2 className="text-xl md:text-2xl  font-bold md:flex items-center gap-2 mt-4 text-yellow-500 hidden ">
                   <MapPin className="w-6 h-6 text-yellow-500" /> Our Location
                 </h2>
                 <div className="mt-2 hidden md:block">
@@ -115,7 +115,7 @@ export default function FlipCard() {
 
           {/* Back Side */}
           <div
-            className="absolute w-full h-full bg-gray-200/90 shadow-xl rounded-2xl md:p-26 p-6 flex flex-col items-center justify-center"
+            className="absolute w-full h-full bg-gray-200/90 shadow-xl rounded-2xl md:px-26 md:py-0 p-6 flex flex-col items-center justify-center"
             style={{
               backfaceVisibility: "hidden",
               transform: "rotateY(180deg)",

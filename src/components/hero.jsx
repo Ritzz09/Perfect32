@@ -1,16 +1,16 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
-import { Smile, Users, ShieldCheck, Heart } from "lucide-react";
 import heroimg from "/public/img/hero.jpeg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTooth, faSyringe, faCrown, faSmileBeam } from "@fortawesome/free-solid-svg-icons";
 
 const uspData = [
-  { icon: <Smile size={40} className="text-yellow-500" />, count: "500+", text: "Happy Patients" },
-  { icon: <Users size={40} className="text-yellow-500" />, count: "50+", text: "Expert Dentists" },
-  { icon: <ShieldCheck size={40} className="text-yellow-500" />, count: "100%", text: "Safety Assured" },
-  { icon: <Heart size={40} className="text-yellow-500" />, count: "5-Star", text: "Patient Care" },
+  { icon: <FontAwesomeIcon icon={faTooth} size="3x" className="text-yellow-500" />, count: "2000+", text: "Dental Implants" },
+  { icon: <FontAwesomeIcon icon={faSyringe} size="3x" className="text-yellow-500" />, count: "6000+", text: "RCT (Root Canal)" },
+  { icon: <FontAwesomeIcon icon={faCrown} size="3x" className="text-yellow-500" />, count: "5000+", text: "Crowns & Bridges" },
+  { icon: <FontAwesomeIcon icon={faSmileBeam} size="3x" className="text-yellow-500" />, count: "700+", text: "Smile Designing" },
 ];
-
 const Hero = () => {
   return (
     <section id="home" className="relative w-full h-screen flex items-center">
@@ -45,6 +45,7 @@ const Hero = () => {
         {/* Buttons */}
         <div className="mt-6">
         <motion.button
+  onClick={() => document.getElementById("contact").scrollIntoView({ behavior: "smooth" })}
   className="mt-10 bg-transparent text-white border-2 px-6 py-3 rounded-full font-semibold hover:bg-yellow-500 hover:text-black hover:border-b-6"
   initial={{ y: 50, opacity: 0 }}
   whileInView={{ y: 0, opacity: 1 }}
@@ -66,7 +67,7 @@ const Hero = () => {
         {uspData.map((usp, index) => (
           <div
             key={index}
-            className="bg-white/10  backdrop-blur-lg rounded-xl p-4 md:p-6 flex flex-col items-center shadow-md shadow-amber-50 hover:scale-110 "
+            className="bg-white/10  backdrop-blur-lg rounded-xl p-4 md:p-6 flex flex-col items-center shadow-md shadow-amber-50 hover:scale-110  "
           >
             {usp.icon}
             <p className="text-black text-2xl font-bold mt-2">{usp.count}</p>
