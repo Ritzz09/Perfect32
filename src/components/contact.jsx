@@ -45,13 +45,14 @@ export default function FlipCard() {
         >
           {/* Front Side */}
           <div
-            className="absolute w-full h-full bg-gray-200/90 shadow-xl rounded-2xl md:p-8 p-2 flex flex-col"
+            className="absolute w-full h-full bg-gray-200/90 shadow-xl rounded-2xl md:p-8 md:pt-2 p-2 pt-4 flex flex-col"
             style={{ backfaceVisibility: "hidden" }}
           >
+            <h1 className="text-center md:text-3xl p-2 font-bold text-2xl text-slate-800">Contact Details</h1>
             <div className="flex flex-col md:grid md:grid-cols-2 md:gap-5 gap-1 md:flex-grow">
 
               {/* Left Side */}
-              <div className="md:border-r-2 border-dashed border-yellow-600 md:pr-14 md:pl-10 md:py-10 text-center md:text-left">
+              <div className="md:border-r-2 border-dashed border-yellow-600  md:px-10 md:py-10 text-center md:text-left">
 
                 <h2 className="flex items-center justify-center md:justify-start text-xl md:text-2xl font-bold gap-2 md:gap-4 mt-3 md:mt-0 mb-3 text-yellow-500">
                   <Phone className="w-6 h-6 text-yellow-500" /> Emergency Case
@@ -103,7 +104,7 @@ export default function FlipCard() {
             </div>
 
             {/* Book Appointment Button at the Bottom */}
-            <div className="flex justify-center mt-6">
+            <div className="flex justify-center mt-3">
               <button
                 onClick={() => setFlipped(true)}
                 className="md:w-1/4 w-2/3 bg-gradient-to-r from-yellow-300 to-amber-500 text-black border-black border-2 font-semibold px-5 py-2 rounded-full hover:scale-110 hover:border-b-6  shadow-md"
@@ -115,7 +116,7 @@ export default function FlipCard() {
 
           {/* Back Side */}
           <div
-            className="absolute w-full h-full bg-gray-200/90 shadow-xl rounded-2xl md:px-26 md:py-0 p-6 flex flex-col items-center justify-center"
+            className="absolute w-auto h-[90%] bg-gray-200/90 shadow-xl rounded-2xl md:px-26 md:py-0 p-6  flex flex-col items-center justify-center"
             style={{
               backfaceVisibility: "hidden",
               transform: "rotateY(180deg)",
@@ -136,7 +137,7 @@ export default function FlipCard() {
               <input type="tel" placeholder="Mobile Number" required className="bg-black/10 w-full border p-2 mb-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400" />
               <input type="text" placeholder="Interest" className="bg-black/10 w-full border p-2 mb-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400" />
             </div>
-            <textarea placeholder="Message" className="bg-black/10 w-full border p-2 mb-2 md:mt-4 h-30 rounded focus:outline-none focus:ring-2 focus:ring-blue-400 z-10"></textarea>
+            <textarea placeholder="Message" className="bg-black/10 w-full border p-2 mb-6 md:mt-4 h-30 rounded focus:outline-none focus:ring-2 focus:ring-blue-400 z-10"></textarea>
 
             <button type="submit" className="z-10 bg-gradient-to-r from-yellow-300 to-amber-500 text-black border-black border-2 font-semibold px-5 py-2 rounded-full hover:scale-110 hover:border-b-6 shadow-md transition">
               Book Appointment
