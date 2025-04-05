@@ -91,7 +91,7 @@ const About = () => {
             }}
             autoplay={{ delay: 3000 }}
             loop
-            className="rounded-xl md:h-150 h-75 border-5 border-yellow-500"
+            className="rounded-xl md:h-150 h-95 border-5 border-yellow-500"
             onSwiper={(swiper) => {
               swiperRef.current = swiper;
               setTimeout(() => swiper.navigation.update(), 500); // Ensure buttons update

@@ -1,24 +1,29 @@
 import React from "react";
-import { FaPhone, FaEnvelope, FaClock, FaFacebook, FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaPhone, FaClock, FaFacebook, FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
 import logo from "/public/img/logo.jpg";
 
-const Footer = () => {
+const FooterOne = () => {
     return (
-        <footer className="hidden md:block relative bg-gray-900 text-white pt-5 pb-6">
+        <footer className="relative bg-gray-900 text-white pt-5 pb-6 md:hidden">
             {/* Triangle Shape */}
-            <div className="container mx-auto px-6 text-center md:text-center">
+            <div className="container mx-auto px-4 text-center md:text-center">
+                <div className="flex justify-center items-center mb-10">
+                    <div className="bg-white p-5 w-30 h-30 rounded-2xl flex justify-center items-center">
+                        <img src={logo} className="h-26 w-26 rounded-xl" />
+                    </div>
+                </div>
                 {/* Top Contact Info */}
-                <div className="flex flex-col md:flex-row justify-around items-center text-center md:text-center mb-6 border-b border-gray-700 pb-6">
-                    <div className="flex flex-col items-center mb-2 md:w-[34%]">
+                <div className="flex flex-row justify-around items-center text-center md:text-center mb-6 border-b border-t pt-6 border-gray-700 pb-6 gap-6">
+                    <div className="flex flex-col items-center mb-2 w-45">
                         <FaPhone className="text-white text-6xl mb-3 bg-yellow-500 rounded-full p-4 rotate-90" />
-                        <a href="tel:+918850568626"><span >+91-8850568626</span></a>
+                        <a href="tel:+918850568626"><span className="text" >+91-8850568626</span></a>
                         <a href="tel:+917710001456"><span>+91-7710001456</span></a>
                     </div>
-                    <div className="flex flex-col items-center mb-2 md:w-[33%]">
+                    {/* <div className="flex flex-col items-center mb-2 md:w-[33%]">
                         <FaEnvelope className="text-white text-6xl mb-3 bg-yellow-500 rounded-full p-4" />
                         <a href="mailto:info@perfect32dentist.com"><span> info@perfect32dentist.com</span></a>
-                    </div>
-                    <div className="flex flex-col items-center mb-2 md:w-[33%]">
+                    </div> */}
+                    <div className="flex flex-col items-center mb-2 w-70">
                         <FaClock className="text-white text-6xl mb-3 bg-yellow-500 rounded-full p-4" />
                         <span>Mon - Sat : 10 AM - 11 PM</span>
                         <span>Sunday : By Appointment</span>
@@ -27,13 +32,9 @@ const Footer = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-2 text-center md:text-left">
                     {/* Logo Section */}
-                    <div className="flex justify-center items-center">
-                        <div className="bg-white p-5 w-40 h-40 rounded-2xl flex justify-center items-center">
-                            <img src={logo} className="h-32 w-32 rounded-xl" />
-                        </div>
-                    </div>
+                    
                     {/* Quick Links */}
-                    <div>
+                    {/* <div>
                         <h3 className="text-xl font-semibold mt-4 md:mt-0">Quick Links</h3>
                         <ul className="text-gray-400 mt-2 space-y-2">
                             {[
@@ -55,7 +56,7 @@ const Footer = () => {
                                 </li>
                             ))}
                         </ul>
-                    </div>
+                    </div> */}
                     {/* Open Hours */}
                     <div>
                         <h3 className="text-xl font-semibold mt-4 md:mt-0">Address :</h3>
@@ -92,4 +93,4 @@ const Footer = () => {
     );
 };
 
-export default Footer;
+export default FooterOne;

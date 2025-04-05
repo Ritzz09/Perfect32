@@ -16,7 +16,7 @@ export default function DentistSection() {
                 <span className="text-gray-800">Meet</span> Our Visionary Founder
             </motion.h2>
             <motion.h2
-                className="md:text-4xl text-2xl font-bold text-gray-800 mb-10 z-12"
+                className="md:text-4xl text-3xl font-bold text-gray-800 mb-10 z-12"
                 initial={{ opacity: 0, y: -50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 1, ease: "easeOut" }}
@@ -35,7 +35,7 @@ export default function DentistSection() {
                     transition={{ duration: 1, ease: "easeOut" }}
                     viewport={{ once: true }}
                 >
-                    <p className="my-4">
+                    <p className="my-4 mt-10">
                         <strong>Meet</strong> <span className="text-yellow-600 font-bold">Dr. Ketan Revanwar</span>, 
                         a visionary and the driving force behind the establishment of Perfect 32 Advanced Dental Clinic. 
                         With a decade of clinical experience in Dentistry, he stands as a seasoned Dental Surgeon.
@@ -88,7 +88,7 @@ export default function DentistSection() {
                     <img
                         src={Image} // Replace with your actual image path
                         alt="Dr. Ketan Revanwar"
-                        className="relative z-12 w-64 md:w-100 rounded-lg  shadow-black/80 shadow-lg border-4 border-t-slate-700 border-r-slate-700 border-b-yellow-500 border-l-yellow-500 hover:scale-105"
+                        className="relative z-12 w-84 md:w-100 rounded-lg  shadow-black/80 shadow-lg border-4 border-t-slate-700 border-r-slate-700 border-b-yellow-500 border-l-yellow-500 hover:scale-105"
                     />
                 </motion.div>
             </div>

@@ -81,7 +81,7 @@ const AccordionItem = ({ header, text }) => {
   return (
     <div id="faqs" className="group md:mb-8 mb-1 w-full rounded-lg bg-white/40 p-4 border-2 border-slate-700 hover:bg-slate-800 hover:text-white">
       <button className="faq-btn bg flex w-full text-left" onClick={handleToggle}>
-        <div className="mr-5 flex h-8 w-full max-w-[40px] items-center justify-center rounded-lg bg-amber-400/50">
+        <div className="mr-5 flex h-8 w-full max-w-[40px] items-center justify-center rounded-lg bg-yellow-500">
           <svg
             className={`fill-primary stroke-primary duration-200 ease-in-out ${active ? "rotate-180" : ""}`}
             width="17"

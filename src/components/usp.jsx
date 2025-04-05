@@ -1,12 +1,38 @@
-import { Smile, Users, ShieldCheck, Heart } from "lucide-react";
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import root from "/public/img/root_canal.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTooth, faCrown, faSmileBeam } from "@fortawesome/free-solid-svg-icons";
+
+// Place uspData ABOVE the component
+const uspData = [
+  {
+    icon: <FontAwesomeIcon icon={faTooth} size="4x" className="text-yellow-500" />,
+    count: "2000+",
+    text: "Dental Implants",
+  },
+  {
+    icon: <img src={root} alt="Root Canal" className="w-14 h-16" />,
+    count: "6000+",
+    text: "RCT (Root Canal)",
+  },
+  {
+    icon: <FontAwesomeIcon icon={faCrown} size="4x" className="text-yellow-500" />,
+    count: "5000+",
+    text: "Crowns & Bridges",
+  },
+  {
+    icon: <FontAwesomeIcon icon={faSmileBeam} size="4x" className="text-yellow-500" />,
+    count: "700+",
+    text: "Smile Designing",
+  },
+];
 
 const USP = () => {
   const [startAnimation, setStartAnimation] = useState(false);
 
   useEffect(() => {
-    setStartAnimation(true); // Triggers only once when the page loads
+    setStartAnimation(true);
   }, []);
 
   return (
@@ -21,7 +47,7 @@ const USP = () => {
         >
           {usp.icon}
           <p className="text-black text-2xl font-bold mt-2">{usp.count}</p>
-          <p className="text-black text-sm font-semibold">{usp.text}</p>
+          <p className="text-black text-sm font-semibold text-center">{usp.text}</p>
         </motion.div>
       ))}
     </motion.div>
@@ -29,10 +55,3 @@ const USP = () => {
 };
 
 export default USP;
-
-const uspData = [
-  { icon: <Smile size={40} className="text-yellow-500" />, count: "500+", text: "Happy Patients" },
-  { icon: <Users size={40} className="text-yellow-500" />, count: "50+", text: "Expert Dentists" },
-  { icon: <ShieldCheck size={40} className="text-yellow-500" />, count: "100%", text: "Safety Assured" },
-  { icon: <Heart size={40} className="text-yellow-500" />, count: "5-Star", text: "Patient Care" },
-];

@@ -39,13 +39,13 @@ const TestimonialSection = () => {
 
   return (
     <div id="testimonials" className="bg-gray-300 py-10 px-10">
-      <motion.h2 className="text-slate-900 md:text-4xl text-2xl font-bold text-center mb-14"
+      <motion.h2 className="text-slate-900 md:text-4xl text-3xl font-bold text-center mb-14"
        initial={{ opacity: 0, y: -50 }}
        whileInView={{ opacity: 1, y: 0 }}
        transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
        viewport={{ once: true }}
       >Real Testimonials, <span className="text-yellow-600">Real Transformations</span></motion.h2>
-      <div className="w-full mx-auto">
+      <div className="w-full  mx-auto">
         {isMobile ? (
           <Slider {...sliderSettings}>
             {testimonials.map((testimonial) => (

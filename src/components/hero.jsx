@@ -3,13 +3,14 @@ import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import heroimg from "/public/img/hero.jpeg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTooth, faSyringe, faCrown, faSmileBeam } from "@fortawesome/free-solid-svg-icons";
+import { faTooth, faCrown, faSmileBeam } from "@fortawesome/free-solid-svg-icons";
+import root from "/public/img/root_canal.png";
 
 const uspData = [
-  { icon: <FontAwesomeIcon icon={faTooth} size="3x" className="text-yellow-500" />, count: "2000+", text: "Dental Implants" },
-  { icon: <FontAwesomeIcon icon={faSyringe} size="3x" className="text-yellow-500" />, count: "6000+", text: "RCT (Root Canal)" },
-  { icon: <FontAwesomeIcon icon={faCrown} size="3x" className="text-yellow-500" />, count: "5000+", text: "Crowns & Bridges" },
-  { icon: <FontAwesomeIcon icon={faSmileBeam} size="3x" className="text-yellow-500" />, count: "700+", text: "Smile Designing" },
+  { icon: <FontAwesomeIcon icon={faTooth} size="4x" className="text-yellow-500" />, count: "2000+", text: "Dental Implants" },
+  { icon: <img src={root} alt="Root Canal" className="w-14 h-16" />, count: "6000+", text: "RCT (Root Canal)" },
+  { icon: <FontAwesomeIcon icon={faCrown} size="4x" className="text-yellow-500" />, count: "5000+", text: "Crowns & Bridges" },
+  { icon: <FontAwesomeIcon icon={faSmileBeam} size="4x" className="text-yellow-500" />, count: "700+", text: "Smile Designing" },
 ];
 const Hero = () => {
   return (
@@ -46,7 +47,7 @@ const Hero = () => {
         <div className="mt-6">
         <motion.button
   onClick={() => document.getElementById("contact").scrollIntoView({ behavior: "smooth" })}
-  className="mt-10 bg-transparent text-white border-2 px-6 py-3 rounded-full font-semibold hover:bg-yellow-500 hover:text-black hover:border-b-6"
+  className="md:mt-10 mt-30 bg-transparent text-white border-2 px-6 py-3 rounded-full font-semibold hover:bg-gradient-to-r from-yellow-300 to-amber-500 hover:text-black hover:border-b-6"
   initial={{ y: 50, opacity: 0 }}
   whileInView={{ y: 0, opacity: 1 }}
   transition={{ type: "spring", stiffness: 300, damping: 10 }}

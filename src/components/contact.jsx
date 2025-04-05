@@ -58,15 +58,13 @@ export default function FlipCard() {
                   <Phone className="w-6 h-6 text-yellow-500" /> Emergency Case
                 </h2>
 
-                <p className="text-lg font-semibold text-black mb-2 ">
-                  Emergency dental care may be needed if you have had a blow to the face, lost a filling, or cracked a tooth.
-                </p>
-                <p className="text-lg flex  justify-center md:justify-start "><Phone className="w-8 h-8 p-1 text-gray-700" /> +91-8850568626</p>
-                <p className="text-lg flex  justify-center md:justify-start"><Phone className="w-8 h-8 p-1  text-gray-700" />+91-7710001456</p>
-                <p className="text-lg flex  justify-center md:justify-start"><Mail className="w-8 h-8 p-1  text-gray-700" />info@perfect32dentist.com</p>
+            
+                <a href="tel:+918850568626"><p className="text-lg flex  justify-center md:justify-start "><Phone className="w-8 h-8 p-1 text-gray-700" /> +91-8850568626</p></a>
+                <a href="tel:+917710001456"><p className="text-lg flex  justify-center md:justify-start"><Phone className="w-8 h-8 p-1  text-gray-700" />+91-7710001456</p></a>
+                <a href="mailto:info@perfect32dentist.com"><p className="text-lg flex  justify-center md:justify-start"><Mail className="w-8 h-8 p-1  text-gray-700" />info@perfect32dentist.com</p></a>
                
 
-                <h2 className="text-xl md:text-2xl font-bold flex items-center justify-center md:justify-start gap-2 mt-4 mb-3 text-yellow-500 ">
+                <h2 className="text-xl md:text-2xl font-bold flex items-center justify-center md:justify-start gap-2 md:mt-10 mt-4 mb-3 text-yellow-500 ">
                   <Clock className="w-6 h-6 text-yellow-500" /> Working Time
                 </h2>
                 <p className="flex text-lg text-gray-900 md:ml-2 justify-center md:justify-start">
@@ -107,9 +105,9 @@ export default function FlipCard() {
             <div className="flex justify-center mt-3">
               <button
                 onClick={() => setFlipped(true)}
-                className="md:w-1/4 w-2/3 bg-gradient-to-r from-yellow-300 to-amber-500 text-black border-black border-2 font-semibold px-5 py-2 rounded-full hover:scale-110 hover:border-b-6  shadow-md"
+                className="md:w-1/4 w-2/3 bg-gradient-to-r from-yellow-300 to-amber-500 text-black border-black border-2 font-semibold px-5 py-2 rounded-full hover:scale-110 hover:border-b-6 mt-7 md:mt-0  shadow-md"
               >
-                Book Appointment Now
+                Book Appointment
               </button>
             </div>
           </div>

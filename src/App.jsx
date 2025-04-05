@@ -13,7 +13,7 @@ import DentistSection from "./components/dentist";
 import Gallery from "./components/gallery";
 import TestimonialSection from "./components/testimonials";
 import Footer from "./components/footer";
-
+import FooterOne from "./components/footerOne";
 function App() {
   const [loading, setLoading] = useState(true);
   const [fadeOut, setFadeOut] = useState(false);
@@ -90,6 +90,7 @@ function App() {
           <ContactForm />
           <Accordion />
           <Footer />
+          <FooterOne />
 
           {/* Scroll to Top Button */}
           {showScroll && (
