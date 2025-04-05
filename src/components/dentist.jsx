@@ -73,8 +73,8 @@ export default function DentistSection() {
                 {/* Right Content (Image with Background Shapes) */}
                 <motion.div
                     className="w-full md:w-1/2 flex justify-center items-center relative"
-                    initial={{ opacity: 0, x: 100 }}
-                    whileInView={{ opacity: 1, x: 0 }}
+                    initial={{ opacity: 0, y: 100 }}
+                    whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, ease: "easeOut" }}
                     viewport={{ once: true }}
                 >

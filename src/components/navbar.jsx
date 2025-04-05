@@ -52,6 +52,7 @@ const Navbar = () => {
   Book Appointment
 </button>
 
+
       {/* Hamburger Button (Mobile) */}
       <button className="md:hidden text-black text-2xl" onClick={() => setIsOpen(!isOpen)}>
         {isOpen ? <FiX /> : <FiMenu />}
@@ -60,13 +61,14 @@ const Navbar = () => {
       {/* Mobile Menu (Fixed Fullscreen) */}
       {isOpen && (
         
-        <div className="fixed top-30 right-0 w-2/3 h-[80%] bg-white text-black flex flex-col items-center justify-center gap-10 z-50 rounded-l-4xl border-4 border-yellow-500 border-r-0">
+        <div className="fixed top-30 right-0 w-2/3 h-[80%] bg-white text-black flex flex-col items-center justify-center gap-6 z-50 rounded-l-4xl border-4 border-yellow-500 border-r-0">
           <a href="#" className="hover:text-yellow-500 text-2xl " onClick={closeMenu}>Home</a>
-          <a href="#" className="hover:text-yellow-500 text-2xl" onClick={closeMenu}>About Us</a>
-          <a href="#" className="hover:text-yellow-500 text-2xl" onClick={closeMenu}>Services</a>
-          <a href="#" className="hover:text-yellow-500 text-2xl" onClick={closeMenu}>Portfolio</a>
-          <a href="#" className="hover:text-yellow-500 text-2xl" onClick={closeMenu}>Testimonials</a>
-          <a href="#" className="hover:text-yellow-500 text-2xl" onClick={closeMenu}>FAQ'S</a>
+          <a href="#about" className="hover:text-yellow-500 text-2xl" onClick={closeMenu}>About Us</a>
+          <a href="#services" className="hover:text-yellow-500 text-2xl" onClick={closeMenu}>Services</a>
+          <a href="#dentist" className="hover:text-yellow-500 text-2xl" onClick={closeMenu}>Dentist</a>
+          <a href="#gallery" className="hover:text-yellow-500 text-2xl" onClick={closeMenu}>Gallery</a>
+          <a href="#testimonials" className="hover:text-yellow-500 text-2xl" onClick={closeMenu}>Testimonials</a>
+          <a href="#contact" className="hover:text-yellow-500 text-2xl" onClick={closeMenu}>Contact Us</a>
           <button
               className="bg-gradient-to-r from-yellow-300 to-amber-500 text-black border-black text-xl mt-6 border-2 font-bold px-5 py-2 rounded-full hover:scale-110 hover:border-b-6 shadow-md"
             onClick={closeMenu}
