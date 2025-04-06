@@ -14,6 +14,10 @@ import Gallery from "./components/gallery";
 import TestimonialSection from "./components/testimonials";
 import Footer from "./components/footer";
 import FooterOne from "./components/footerOne";
+import { Routes, Route } from "react-router-dom";
+import ThankYou from "./components/thankYou";
+
+
 function App() {
   const [loading, setLoading] = useState(true);
   const [fadeOut, setFadeOut] = useState(false);
@@ -79,18 +83,28 @@ function App() {
       {/* Main Content */}
       {!loading && (
         <>
-          <Navbar />
-          <Hero />
-          <USP />
-          <About />
-          <Services />
-          <DentistSection />
-          <Gallery />
-          <TestimonialSection />
-          <ContactForm />
-          <Accordion />
-          <Footer />
-          <FooterOne />
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <>
+                  <Navbar />
+                  <Hero />
+                  <USP />
+                  <About />
+                  <Services />
+                  <DentistSection />
+                  <Gallery />
+                  <TestimonialSection />
+                  <ContactForm />
+                  <Accordion />
+                  <Footer />
+                  <FooterOne />
+                </>
+              }
+            />
+            <Route path="/thankyou" element={<ThankYou />} />
+          </Routes>
 
           {/* Scroll to Top Button */}
           {showScroll && (

@@ -2,6 +2,48 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Phone, Clock, DollarSign, MapPin, Calendar , Mail } from "lucide-react";
 import back from "/public/img/contact_bg.png";
+import { useNavigate } from "react-router-dom";
+
+const [formData, setFormData] = useState({
+  name: "",
+  email: "",
+  phone: "",
+  service: "",
+  message: "",
+  appointmentDate: "",
+});
+
+const handleChange = (e) => {
+  const { name, value } = e.target;
+  setFormData((prev) => ({
+    ...prev,
+    [name]: value,
+  }));
+};
+
+const navigate = useNavigate();
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  try {
+    const res = await fetch("/api/sendEmail", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
+
+    if (res.ok) {
+      navigate("/thankyou"); // 🔁 Navigate after success
+    } else {
+      alert("Something went wrong.");
+    }
+  } catch (error) {
+    console.error(error);
+    alert("Error sending appointment. Try again.");
+  }
+};
+
 
 export default function FlipCard() {
   const [flipped, setFlipped] = useState(false);
@@ -130,14 +172,14 @@ export default function FlipCard() {
             
             <h2 className="text-2xl font-bold text-center mb-8 text-slate-900 z-10">Book an Appointment</h2>
             <div className=" md:grid md:grid-cols-2 gap-4 z-10">
-              <input type="text" placeholder="Name" required className="bg-black/10 md:w-[420px] w-full border p-2 mb-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400 required" />
-              <input type="email" placeholder="Email" className="bg-black/10 w-full border p-2 mb-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400" />
-              <input type="tel" placeholder="Mobile Number" required className="bg-black/10 w-full border p-2 mb-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400" />
-              <input type="text" placeholder="Interest" className="bg-black/10 w-full border p-2 mb-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400" />
+              <input  name="name" value={formData.name} onChange={handleChange} type="text" placeholder="Name" required className="bg-black/10 md:w-[420px] w-full border p-2 mb-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400 required" />
+              <input  name="email" value={formData.email} onChange={handleChange} type="email" placeholder="Email" className="bg-black/10 w-full border p-2 mb-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400" />
+              <input  name="phone" value={formData.phone} onChange={handleChange} type="tel" placeholder="Mobile Number" required className="bg-black/10 w-full border p-2 mb-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400" />
+              <input  name="appointmentDate" value={formData.appointmentDate} onChange={handleChange} type="date" placeholder="Select Appointment Date" className="bg-black/10 w-full border p-2 mb-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400" />
             </div>
-            <textarea placeholder="Message" className="bg-black/10 w-full border p-2 mb-6 md:mt-4 h-30 rounded focus:outline-none focus:ring-2 focus:ring-blue-400 z-10"></textarea>
+            <textarea  name="message" value={formData.message} onChange={handleChange} placeholder="Message" className="bg-black/10 w-full border p-2 mb-6 md:mt-4 h-30 rounded focus:outline-none focus:ring-2 focus:ring-blue-400 z-10"></textarea>
 
-            <button type="submit" className="z-10 bg-gradient-to-r from-yellow-300 to-amber-500 text-black border-black border-2 font-semibold px-5 py-2 rounded-full hover:scale-110 hover:border-b-6 shadow-md transition">
+            <button onClick={handleSubmit} type="submit" className="z-10 bg-gradient-to-r from-yellow-300 to-amber-500 text-black border-black border-2 font-semibold px-5 py-2 rounded-full hover:scale-110 hover:border-b-6 shadow-md transition">
               Book Appointment
             </button>
 
