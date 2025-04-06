@@ -1,5 +1,5 @@
 import React from "react";
-import { FaPhone, FaEnvelope, FaClock, FaFacebook, FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaPhone, FaEnvelope, FaClock, FaFacebook, FaYoutube, FaTwitter, FaInstagram } from "react-icons/fa";
 import logo from "/public/img/logo.jpg";
 
 const Footer = () => {
@@ -76,8 +76,8 @@ const Footer = () => {
                 {/* Social Icons */}
                 <div className="flex justify-center space-x-6 mt-6 text-gray-400">
                     <a target="__blanked" href="https://www.facebook.com/perfect32dentist"><FaFacebook className="hover:text-white text-xl" /></a>
-                    <a target="__blanked" href="https://www.facebook.com/perfect32dentist"><FaLinkedin className="hover:text-white text-xl" /></a>
-                    <a target="__blanked" href="https://www.facebook.com/perfect32dentist"><FaTwitter className="hover:text-white text-xl" /></a>
+                    <a target="__blanked" href="https://www.youtube.com/@perfect32dentist96/"><FaYoutube className="hover:text-white text-xl" /></a>
+                    <a target="__blanked" href="https://x.com/KhargharD5287"><FaTwitter className="hover:text-white text-xl" /></a>
                     <a target="__blanked" href=" https://www.instagram.com/perfect32dentist/"><FaInstagram className="hover:text-white text-xl" /></a>
                    
                 </div>

@@ -19,7 +19,7 @@ export default async function handler(req, res) {
   try {
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
-      to: "riteshlkh2018@gmail.com", // Change to dentist's email
+      to: "kharghardentist@gmail.com", // Change to dentist's email
       subject: "New Appointment Request",
       text: `Details of the person contacted you are as follows:
       
@@ -36,5 +36,5 @@ export default async function handler(req, res) {
     console.error("Email sending failed:", error);
     return res.status(500).json({ error: error.message });
   }
-    
+
 }

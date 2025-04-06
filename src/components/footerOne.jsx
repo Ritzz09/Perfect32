@@ -1,5 +1,5 @@
 import React from "react";
-import { FaPhone, FaClock, FaFacebook, FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaPhone, FaClock, FaFacebook, FaYoutube, FaTwitter, FaInstagram } from "react-icons/fa";
 import logo from "/public/img/logo.jpg";
 
 const FooterOne = () => {
@@ -75,14 +75,13 @@ const FooterOne = () => {
                 </div>
 
                 {/* Social Icons */}
-                <div className="flex justify-center space-x-6 mt-6 text-gray-400">
-                    <a target="__blanked" href="https://www.facebook.com/perfect32dentist"><FaFacebook className="hover:text-white text-xl" /></a>
-                    <a target="__blanked" href="https://www.facebook.com/perfect32dentist"><FaLinkedin className="hover:text-white text-xl" /></a>
-                    <a target="__blanked" href="https://www.facebook.com/perfect32dentist"><FaTwitter className="hover:text-white text-xl" /></a>
-                    <a target="__blanked" href=" https://www.instagram.com/perfect32dentist/"><FaInstagram className="hover:text-white text-xl" /></a>
-                   
-                </div>
-
+                  <div className="flex justify-center space-x-6 mt-6 text-gray-400">
+                                    <a target="__blanked" href="https://www.facebook.com/perfect32dentist"><FaFacebook className="hover:text-white text-xl" /></a>
+                                    <a target="__blanked" href="https://www.youtube.com/@perfect32dentist96/"><FaYoutube className="hover:text-white text-xl" /></a>
+                                    <a target="__blanked" href="https://x.com/KhargharD5287"><FaTwitter className="hover:text-white text-xl" /></a>
+                                    <a target="__blanked" href=" https://www.instagram.com/perfect32dentist/"><FaInstagram className="hover:text-white text-xl" /></a>
+                                   
+                                </div>
                 {/* Footer Bottom */}
                 <p className="text-center text-gray-500 mt-6 text-lg">© 2025<span className="font-bold"> Perfect 32</span>  All Rights Reserved. </p>
                 {/* <span> Designed by </span> */}

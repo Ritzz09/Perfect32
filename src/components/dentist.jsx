@@ -50,22 +50,30 @@ export default function DentistSection() {
                         over 10,000 patients, ensuring a 100% satisfaction rate. His passion for dentistry and dedication 
                         to patient care make him a true leader in the field.
                     </p>
-                    <ul className="mt-6 space-y-3 font-semibold">
+                    <ul className="mt-6 space-y-3 text-lg font-bold">
                         <li className="flex items-start gap-3">
-                            <Star className="text-yellow-500 fill-amber-300 w-6 h-6" />
-                            <span>Over 10 years of clinical experience in Dentistry.</span>
+                            
+                            <span>🦷 13+ Years of Experience (12 years as a specialist)</span>
                         </li>
                         <li className="flex items-start gap-3">
-                            <Star className="text-yellow-500 fill-amber-300 w-6 h-6" />
-                            <span>Specializes in cosmetic dentistry and full mouth rehabilitation.</span>
+                            
+                            <span>🎓 BDS-Dental Surgeon & Implantologist</span>
                         </li>
                         <li className="flex items-start gap-3">
-                            <Star className="text-yellow-500 fill-amber-300 w-6 h-6" />
-                            <span>Successfully treated over 10,000 patients with a 100% satisfaction rate.</span>
+                            
+                            <span>🔬 Expert in advanced procedures & implants</span>
                         </li>
                         <li className="flex items-start gap-3">
-                            <Star className="text-yellow-500 fill-amber-300 w-6 h-6" />
-                            <span>Committed to transforming smiles with cutting-edge dental procedures.</span>
+                            
+                            <span>👨‍⚕ Patient-focused & precise care</span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                            
+                            <span>🏆 Renowned for quality and reliability</span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                            
+                            <span>🤝 Personalized care with a gentle touch</span>
                         </li>
                     </ul>
                 </motion.div>
