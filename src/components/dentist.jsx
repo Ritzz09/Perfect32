@@ -50,32 +50,22 @@ export default function DentistSection() {
                         over 10,000 patients, ensuring a 100% satisfaction rate. His passion for dentistry and dedication 
                         to patient care make him a true leader in the field.
                     </p>
-                    <ul className="mt-6 space-y-3 text-lg font-bold">
-                        <li className="flex items-start gap-3">
-                            
-                            <span>🦷 13+ Years of Experience (12 years as a specialist)</span>
-                        </li>
-                        <li className="flex items-start gap-3">
-                            
-                            <span>🎓 BDS-Dental Surgeon & Implantologist</span>
-                        </li>
-                        <li className="flex items-start gap-3">
-                            
-                            <span>🔬 Expert in advanced procedures & implants</span>
-                        </li>
-                        <li className="flex items-start gap-3">
-                            
-                            <span>👨‍⚕ Patient-focused & precise care</span>
-                        </li>
-                        <li className="flex items-start gap-3">
-                            
-                            <span>🏆 Renowned for quality and reliability</span>
-                        </li>
-                        <li className="flex items-start gap-3">
-                            
-                            <span>🤝 Personalized care with a gentle touch</span>
-                        </li>
-                    </ul>
+                    <ul className="mt-6 space-y-3 text-base font-semibold leading-snug">
+  {[
+    { icon: "🦷", text: "13+ Years of Experience (12 years as a specialist)" },
+    { icon: "🎓", text: "BDS-Dental Surgeon & Implantologist" },
+    { icon: "🔬", text: "Expert in advanced procedures & implants" },
+    { icon: "👨‍⚕️", text: "Patient-focused & precise care" },
+    { icon: "🏆", text: "Renowned for quality and reliability" },
+    { icon: "🤝", text: "Personalized care with a gentle touch" },
+  ].map((item, index) => (
+    <li key={index} className="flex items-start gap-2">
+      <span className="text-lg">{item.icon}</span>
+      <span className="flex-1 md:text-xl">{item.text}</span>
+    </li>
+  ))}
+</ul>
+
                 </motion.div>
 
                 {/* Right Content (Image with Background Shapes) */}

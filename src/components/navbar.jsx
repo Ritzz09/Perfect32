@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import logo from "/public/img/logo.jpg";
 import { motion } from "framer-motion";
+import { X } from "lucide-react";
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -60,8 +62,20 @@ const Navbar = () => {
 
       {/* Mobile Menu (Fixed Fullscreen) */}
       {isOpen && (
+
         
-        <div className="fixed top-30 right-0 w-2/3 h-[80%] bg-white text-black flex flex-col items-center justify-center gap-6 z-50 rounded-l-4xl border-4 border-yellow-500 border-r-0">
+        
+        <div className="fixed top-0 left-0 w-full h-full bg-white text-black flex flex-col items-center justify-center gap-6 z-50 rounded-4xl border-4 border-yellow-500 ">
+           <button
+      onClick={() => {
+        closeMenu(); // Close the menu
+        window.location.href = "#"; // Navigate to home
+      }}
+      className="absolute top-4 right-4 text-3xl text-black hover:text-yellow-500"
+      aria-label="Close Menu"
+    >
+       <X className="w-8 h-8" />
+    </button>
           <a href="#" className="hover:text-yellow-500 text-2xl " onClick={closeMenu}>Home</a>
           <a href="#about" className="hover:text-yellow-500 text-2xl" onClick={closeMenu}>About Us</a>
           <a href="#services" className="hover:text-yellow-500 text-2xl" onClick={closeMenu}>Services</a>

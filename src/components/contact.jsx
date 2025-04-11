@@ -100,20 +100,20 @@ export default function FlipCard() {
                 </h2>
 
             
-                <a href="tel:+918850568626"><p className="text-lg flex  justify-center md:justify-start "><Phone className="w-8 h-8 p-1 text-gray-700" /> +91-8850568626</p></a>
-                <a href="tel:+917710001456"><p className="text-lg flex  justify-center md:justify-start"><Phone className="w-8 h-8 p-1  text-gray-700" />+91-7710001456</p></a>
-                <a href="mailto:info@perfect32dentist.com"><p className="text-lg flex  justify-center md:justify-start"><Mail className="w-8 h-8 p-1  text-gray-700" />info@perfect32dentist.com</p></a>
+                <a href="tel:+918850568626"><p className="text-lg flex  justify-center md:justify-start "><Phone className="w-8 h-8 p-1 text-black" /> +91-8850568626</p></a>
+                <a href="tel:+917710001456"><p className="text-lg flex  justify-center md:justify-start"><Phone className="w-8 h-8 p-1  text-black" />+91-7710001456</p></a>
+                <a href="mailto:kharghardentist@gmail.com"><p className="text-lg flex  justify-center md:justify-start"><Mail className="w-8 h-8 p-1  text-black" />kharghardentist@gmail.com</p></a>
                
 
                 <h2 className="text-xl md:text-2xl font-bold flex items-center justify-center md:justify-start gap-2 md:mt-10 mt-4 mb-3 text-yellow-500 ">
                   <Clock className="w-6 h-6 text-yellow-500" /> Working Time
                 </h2>
                 <p className="flex text-lg text-gray-900 md:ml-2 justify-center md:justify-start">
-                  <Calendar className="w-6 h-6 mr-2  text-gray-700" />
+                  <Calendar className="w-6 h-6 mr-2  text-black" />
                   <span className="font-semibold">Mon-Sat : </span> 10 AM - 11 PM
                 </p>
                 <p className="flex text-lg  md:ml-2 justify-center md:justify-start">
-                  <Calendar className="w-6 h-6 mr-2  text-gray-700" />
+                  <Calendar className="w-6 h-6 mr-2  text-black" />
                   <span className="font-semibold">Sunday : </span> By Appointment
                 </p>
               </div>

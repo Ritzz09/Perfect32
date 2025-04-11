@@ -34,7 +34,7 @@ const Hero = () => {
         <h1 className="text-yellow-500 text-3xl md:text-5xl font-bold leading-tight w-fit">
           <TypeAnimation
             sequence={["The Dental Care With The Gentle Touch", 2000]}
-            speed={50}
+            speed={200}
             repeat={Infinity}
           />
         </h1>

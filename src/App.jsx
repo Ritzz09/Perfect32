@@ -117,7 +117,7 @@ function App() {
           )}
 
           {/* Floating Phone & WhatsApp Buttons */}
-          <div className="fixed md:bottom-6 md:left-6 bottom-3 left-3 flex flex-col space-y-3 z-50">
+          <div className="fixed md:bottom-6 md:left-6 bottom-3 left-3 flex flex-col space-y-3 z-[999]">
             {/* Phone Button */}
             <a
               href="tel:+918850568626" // Replace with actual phone number

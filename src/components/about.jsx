@@ -99,7 +99,7 @@ const About = () => {
           >
             {images.map((img, index) => (
               <SwiperSlide key={index}>
-                <img src={img} alt={`Clinic ${index + 1}`} className="w-full  object-cover" />
+                <img src={img} alt={`Clinic ${index + 1}`} className="w-full h-full  object-cover" />
               </SwiperSlide>
             ))}
           </Swiper>

@@ -118,11 +118,11 @@ const leftItems = [
     text: "Depending on the teeth arrangement and color, texture of the teeth, smile can be improved in many ways. Smile designing is one of the best ways to improve smile drastically and having braces treatment is again the one of the best things to have to improve the smile."
   },
   {
-    header: "Is TOOTH REMOVAL painful?",
+    header: "Is Tooth Removal painful?",
     text: "Process of tooth removal is done under local anesthesia. So, it’s a completely painless procedure. In certain situations, it can cause little pain but dentist will give medications to overcome that pain."
   },
   {
-    header: "Is ROOT CANAL TREATMENT painful?",
+    header: "Is Root Canal Treatment Painful?",
     text: "Its completely painless treatment. Now a days with improved technology and methodologies, root canal treatment is no more painful procedure."
   }
 ];
@@ -141,7 +141,9 @@ const rightItems = [
     text: "Brushing twice and rinsing after every time we eat is the best way of maintaining oral hygiene. For above 5 years kids, we can also do flossing if needed."
   },
   {
-    header: "Is dental treatment safe in COVID-19 situations?",
-    text: "The answer is YES. After following certain protocols and taking precautions dentistry is completely safe for all procedures. All safety measures and protocols are followed completely at our clinic."
-  }
+    header: "How often should I visit the dentist?",
+    text: "It is recommended to visit the dentist every 6 months for a routine check-up and cleaning. Regular visits help detect problems early, maintain oral health, and prevent issues like cavities, gum disease, and plaque buildup."
+  },
+  
+  
 ];

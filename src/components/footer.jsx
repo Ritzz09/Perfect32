@@ -16,7 +16,7 @@ const Footer = () => {
                     </div>
                     <div className="flex flex-col items-center mb-2 md:w-[33%]">
                         <FaEnvelope className="text-white text-6xl mb-3 bg-yellow-500 rounded-full p-4" />
-                        <a href="mailto:info@perfect32dentist.com"><span> info@perfect32dentist.com</span></a>
+                        <a href="mailto:kharghardentist@gmail.com"><span> kharghardentist@gmail.com</span></a>
                     </div>
                     <div className="flex flex-col items-center mb-2 md:w-[33%]">
                         <FaClock className="text-white text-6xl mb-3 bg-yellow-500 rounded-full p-4" />

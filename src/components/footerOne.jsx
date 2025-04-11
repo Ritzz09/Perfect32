@@ -14,7 +14,7 @@ const FooterOne = () => {
                 </div>
                 {/* Top Contact Info */}
                 <div className="flex flex-row justify-around items-center text-center md:text-center mb-6 border-b border-t pt-6 border-gray-700 pb-6 gap-6">
-                    <div className="flex flex-col items-center mb-2 w-45">
+                    <div className="flex flex-col items-center mb-2 w-50">
                         <FaPhone className="text-white text-6xl mb-3 bg-yellow-500 rounded-full p-4 rotate-90" />
                         <a href="tel:+918850568626"><span className="text" >+91-8850568626</span></a>
                         <a href="tel:+917710001456"><span>+91-7710001456</span></a>
@@ -23,16 +23,16 @@ const FooterOne = () => {
                         <FaEnvelope className="text-white text-6xl mb-3 bg-yellow-500 rounded-full p-4" />
                         <a href="mailto:info@perfect32dentist.com"><span> info@perfect32dentist.com</span></a>
                     </div> */}
-                    <div className="flex flex-col items-center mb-2 w-70">
+                    <div className="flex flex-col items-center mb-2 w-72">
                         <FaClock className="text-white text-6xl mb-3 bg-yellow-500 rounded-full p-4" />
-                        <span>Mon - Sat : 10 AM - 11 PM</span>
+                        <span>Mon-Sat : 10 AM-11 PM</span>
                         <span>Sunday : By Appointment</span>
                     </div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-2 text-center md:text-left">
                     {/* Logo Section */}
-                    
+
                     {/* Quick Links */}
                     {/* <div>
                         <h3 className="text-xl font-semibold mt-4 md:mt-0">Quick Links</h3>
@@ -75,19 +75,18 @@ const FooterOne = () => {
                 </div>
 
                 {/* Social Icons */}
-                  <div className="flex justify-center space-x-6 mt-6 text-gray-400">
-                                    <a target="__blanked" href="https://www.facebook.com/perfect32dentist"><FaFacebook className="hover:text-white text-xl" /></a>
-                                    <a target="__blanked" href="https://www.youtube.com/@perfect32dentist96/"><FaYoutube className="hover:text-white text-xl" /></a>
-                                    <a target="__blanked" href="https://x.com/KhargharD5287"><FaTwitter className="hover:text-white text-xl" /></a>
-                                    <a target="__blanked" href=" https://www.instagram.com/perfect32dentist/"><FaInstagram className="hover:text-white text-xl" /></a>
-                                   
-                                </div>
+                <div className="flex justify-center space-x-6 mt-6 text-gray-400">
+                    <a target="__blanked" href="https://www.facebook.com/perfect32dentist"><FaFacebook className="hover:text-white text-xl" /></a>
+                    <a target="__blanked" href="https://www.youtube.com/@perfect32dentist96/"><FaYoutube className="hover:text-white text-xl" /></a>
+                    <a target="__blanked" href="https://x.com/KhargharD5287"><FaTwitter className="hover:text-white text-xl" /></a>
+                    <a target="__blanked" href=" https://www.instagram.com/perfect32dentist/"><FaInstagram className="hover:text-white text-xl" /></a>
+                </div>
                 {/* Footer Bottom */}
                 <p className="text-center text-gray-500 mt-6 text-lg">© 2025<span className="font-bold"> Perfect 32</span>  All Rights Reserved. </p>
                 {/* <span> Designed by </span> */}
                 {/* <a target="_blanked" href="https://mastermindweb.in/" rel="noopener noreferrer" className="text-blue-600">MasterMind Web Developers</a> */}
             </div>
-            
+
         </footer>
     );
 };
